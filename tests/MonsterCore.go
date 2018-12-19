@@ -4,8 +4,8 @@ import (
 	. "gopkg.in/check.v1"
 
 	"github.com/polyswarm/perigord/contract"
-	"github.com/polyswarm/perigord/network"
-	"github.com/polyswarm/perigord/testing"
+	// "github.com/polyswarm/perigord/network"
+	// "github.com/polyswarm/perigord/testing"
 
 	"perigord/bindings"
 )
