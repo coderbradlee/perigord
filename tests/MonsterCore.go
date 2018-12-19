@@ -11,7 +11,7 @@ import (
 )
 
 type MonsterCoreSuite struct {
-    network     *network.Network
+	network *network.Network
 }
 
 var _ = Suite(&MonsterCoreSuite{})
@@ -30,3 +30,12 @@ func (s *MonsterCoreSuite) TearDownTest(c *C) {
 }
 
 // USER TESTS GO HERE
+func (s *MonsterCoreSuite) TestName(c *C) {
+	session := contract.Session("MonsterCore")
+	c.Assert(session, NotNil)
+	token_session, ok := session.(*bindings.MonsterCoreSession)
+	c.Assert(ok, Equals, true)
+	c.Assert(token_session, NotNil)
+	ret, _ := token_session.totalSupply()
+	c.Assert(ret, Equals, 0)
+}
