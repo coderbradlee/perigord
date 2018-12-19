@@ -3,5 +3,5 @@ license: Apache 2.0
 
 networks:
     dev:
-        url: http:////192.168.1.52:18545
+        url: http://192.168.1.52:18545
         keystore: ./
