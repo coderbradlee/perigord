@@ -36,6 +36,6 @@ func (s *MonsterCoreSuite) TestName(c *C) {
 	token_session, ok := session.(*bindings.MonsterCoreSession)
 	c.Assert(ok, Equals, true)
 	c.Assert(token_session, NotNil)
-	ret, _ := token_session.totalSupply()
+	ret, _ := token_session.TotalSupply()
 	c.Assert(ret, Equals, 0)
 }
