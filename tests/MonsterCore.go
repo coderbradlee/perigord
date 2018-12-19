@@ -16,18 +16,18 @@ type MonsterCoreSuite struct {
 
 var _ = Suite(&MonsterCoreSuite{})
 
-func (s *MonsterCoreSuite) SetUpTest(c *C) {
-	nw, err := testing.SetUpTest()
-	if err != nil {
-		c.Fatal(err)
-	}
+// func (s *MonsterCoreSuite) SetUpTest(c *C) {
+// 	nw, err := testing.SetUpTest()
+// 	if err != nil {
+// 		c.Fatal(err)
+// 	}
 
-	s.network = nw
-}
+// 	s.network = nw
+// }
 
-func (s *MonsterCoreSuite) TearDownTest(c *C) {
-	testing.TearDownTest()
-}
+// func (s *MonsterCoreSuite) TearDownTest(c *C) {
+// 	testing.TearDownTest()
+// }
 
 // USER TESTS GO HERE
 func (s *MonsterCoreSuite) TestName(c *C) {
