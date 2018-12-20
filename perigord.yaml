@@ -5,3 +5,4 @@ networks:
     dev:
         url: http://192.168.1.52:18545
         keystore: ./
+        passphrase: 123
