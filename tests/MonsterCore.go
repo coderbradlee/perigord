@@ -25,9 +25,9 @@ func (s *MonsterCoreSuite) SetUpTest(c *C) {
 	s.network = nw
 }
 
-func (s *MonsterCoreSuite) TearDownTest(c *C) {
-	testing.TearDownTest()
-}
+// func (s *MonsterCoreSuite) TearDownTest(c *C) {
+// 	testing.TearDownTest()
+// }
 
 // USER TESTS GO HERE
 func (s *MonsterCoreSuite) TestName(c *C) {
