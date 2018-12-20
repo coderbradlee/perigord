@@ -13,7 +13,7 @@ import (
 	"github.com/polyswarm/perigord/network"
 	"log"
 	"perigord/bindings"
-	"perigord/migrations"
+	// "perigord/migrations"
 )
 
 func main() {
@@ -25,7 +25,7 @@ func main() {
 		log.Fatalln("could not connect to dev network: ", err)
 	}
 	// Run our migrations
-	if err := migration.RunMigrations(context.Background(), nw); err != nil {
+	if err := migration.RunMigrations(context.Background(), nw, true); err != nil {
 		log.Fatalln("error running migrations: ", err)
 	}
 	session, ok := contract.Session("MonsterCore").(*bindings.MonsterCoreSession)
@@ -37,5 +37,5 @@ func main() {
 	// symbol, _ := session.Symbol()
 	// fmt.Printf("Let's spend some %s\n", name)
 	// fmt.Printf("There are %d %s in total\n", totalSupply, symbol)
-	fmt.Println("supply:",totalSupply)
+	fmt.Println("supply:", totalSupply)
 }
